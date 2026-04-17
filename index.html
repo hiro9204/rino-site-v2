@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北海道の整体師・認定作業療法士 りの｜りのトレ</title>
+  <meta name="description" content="北海道で19年のキャリアを持つ認定作業療法士・整体師のりのが発信する、身体の悩みを根本から解決するための健康ライブラリ。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ════ PASSWORD OVERLAY ════ -->
+<div id="pw-overlay" style="position:fixed;inset:0;z-index:9999;background:#FAF7F2;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:32px 24px;">
+  <div style="width:100%;max-width:360px;background:#fff;border:1px solid #E8E0D0;border-radius:20px;padding:40px 32px 36px;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,0.06);">
+    <div style="font-size:36px;margin-bottom:12px;">🔒</div>
+    <div style="font-size:22px;font-weight:700;margin-bottom:8px;">りのトレ</div>
+    <p style="font-size:14px;color:#6A6A66;margin-bottom:24px;">このサイトは限定公開です。<br>パスワードを入力してください。</p>
+    <input id="pw-input" type="password" placeholder="パスワード" autocomplete="current-password"
+      style="width:100%;padding:12px 16px;border:1.5px solid #E8E0D0;border-radius:10px;font-size:16px;outline:none;box-sizing:border-box;margin-bottom:12px;">
+    <button onclick="checkPw()" style="width:100%;padding:13px;background:#5E9E8A;color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:600;cursor:pointer;">入る</button>
+    <p id="pw-err" style="color:#c0392b;font-size:13px;margin-top:10px;min-height:18px;"></p>
+  </div>
+</div>
+
+  <!-- ナビゲーション -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <img src="images/rino_icon.jpg" alt="りのさんアイコン" class="nav-icon">
+        <span>北海道の整体師・認定作業療法士 <strong>りの</strong></span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">りのについて</a></li>
+        <li><a href="#philosophy">思いと前提</a></li>
+        <li><a href="#library">健康図鑑</a></li>
+        <li><a href="#rino-tre">りのトレ</a></li>
+        <li><a href="#clinic-guide">整体院選び</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="container" style="display: flex; align-items: center; width: 100%;">
+      <div class="hero-content">
+        <div class="hero-badge animate-fade-up">認定作業療法士 × 整体師 ── 北海道・りのトレ</div>
+        <h1 class="hero-title animate-fade-up delay-1">
+          自分の身体を<br><span class="highlight">正しく知り、</span><br>自分で整える。
+        </h1>
+        <p class="hero-sub animate-fade-up delay-2">
+          「長く通わせない整体院」をモットーに、北海道で19年のキャリアを持つ認定作業療法士が、身体の悩みを解決するエッセンスを凝縮しました。
+        </p>
+        <div class="hero-actions animate-fade-up delay-3">
+          <a href="#library" class="btn btn-primary">症状から探す</a>
+          <a href="#rino-tre" class="btn btn-secondary">りのトレ一覧</a>
+        </div>
+        <div class="hero-stats animate-fade-up delay-4">
+          <div class="stat">
+            <div class="stat-num">221</div>
+            <div class="stat-label">毎日投稿数</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <div class="stat-num">19</div>
+            <div class="stat-label">臨床年数</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <div class="stat-num">45</div>
+            <div class="stat-label">りのトレ種目</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image animate-fade-up delay-2">
+        <div class="hero-icon-wrap">
+          <img src="images/rino_icon.jpg" alt="整体師りの" class="hero-icon">
+          <div class="hero-icon-ring ring-1"></div>
+          <div class="hero-icon-ring ring-2"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- りのについて (About) -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Profile</span>
+        <h2 class="section-title">認定作業療法士 / 整体師（個人事業主）</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <div class="about-icon">🏔️</div>
+          <h3>北海道で培った19年のキャリア</h3>
+          <p>
+            北海道にて19年間、訪問整体やリハビリテーションの現場で数多くの方々の身体と向き合ってきました。「痛みの原因は、痛みのある場所にあるとは限らない」という真実を伝え、一人でも多くの方が自分の身体の主導権を取り戻せるよう活動しています。
+          </p>
+          <div class="about-tags">
+            <span class="tag">認定作業療法士（19年目）</span>
+            <span class="tag">COT認定講師</span>
+            <span class="tag">認知症ケア専門士</span>
+            <span class="tag">SJF修了</span>
+            <span class="tag">JTA協会認定</span>
+          </div>
+        </div>
+        <div class="about-card reveal delay-1">
+          <div class="about-icon">🤝</div>
+          <h3>長く通わせない整体院</h3>
+          <p>
+            私のモットーは「長く通わせない整体院」です。施術で整えるのはもちろんですが、最も大切なのはお客様自身が「なぜ痛むのか」を理解し、自宅でケアできるようになること。そのための知識とトレーニング（りのトレ）を惜しみなく提供します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 思いと前提 (Philosophy) -->
+  <section id="philosophy" class="section section-accent">
+    <div class="container">
+      <div class="about-philosophy">
+        <div class="philosophy-text reveal">
+          <span class="section-tag">Philosophy</span>
+          <h2>りのさんの思いと前提</h2>
+          <div class="philosophy-quote">
+            「良いと思ってやっているその運動が、実は今のあなたの身体には逆効果かもしれません。」
+          </div>
+          <p>
+            身体の仕組みは複雑です。「がんばりすぎている筋肉」を緩め、「サボっている筋肉」を呼び覚ます。このバランスを整えることが、根本的な改善への近道です。<br><br>
+            万人に効く魔法の運動はありません。だからこそ、自分の今の状態を正しく評価し、必要な刺激を正しく入れる。そのためのリテラシーを、このサイトを通じて身につけてほしいと願っています。
+          </p>
+        </div>
+        <div class="philosophy-features reveal delay-1">
+          <div class="about-card" style="margin-bottom: 1.5rem;">
+            <h4>✅ 正しい評価が先</h4>
+            <p style="font-size: 0.9rem;">どこを鍛えるべきか、どこを緩めるべきか。まずは自分の身体の「クセ」を知ることがスタートです。</p>
+          </div>
+          <div class="about-card">
+            <h4>✅ 10秒からの習慣</h4>
+            <p style="font-size: 0.9rem;">「りのトレ」は数分で終わるものばかり。無理な努力より、正しい刺激を毎日少しずつ入れることが大切です。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 健康図鑑 (Library) -->
+  <section id="library" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Library</span>
+        <h2 class="section-title">身体のトラブル・悩み別図鑑</h2>
+        <p class="section-desc">今の悩みや気になる部位から、解決のヒントを見つけましょう。認定作業療法士の視点で解説した200回以上の知恵が詰まっています。</p>
+      </div>
+
+      <!-- フィルター (悩み・症状別) -->
+      <div class="library-filters reveal">
+        <button class="filter-btn active" data-cat="all">すべて表示</button>
+        <button class="filter-btn" data-cat="waist">🦴 腰痛・反り腰・丸腰</button>
+        <button class="filter-btn" data-cat="shoulder">💪 肩こり・五十肩・首</button>
+        <button class="filter-btn" data-cat="leg">🦵 膝の痛み・足のむくみ</button>
+        <button class="filter-btn" data-cat="hand">🤲 手の痛み・腱鞘炎</button>
+        <button class="filter-btn" data-cat="theory">🧠 身体の仕組み・理論</button>
+      </div>
+
+      <!-- 検索 -->
+      <div class="search-wrap reveal">
+        <div class="search-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" id="searchInput" placeholder="例：反り腰、膝、五十肩...">
+          <button id="searchClear" class="search-clear">✕</button>
+        </div>
+      </div>
+
+      <div class="results-info reveal">
+        <span id="resultsCount">---</span>
+      </div>
+
+      <div class="cards-grid" id="cardsGrid">
+        <!-- JSで動的生成 -->
+      </div>
+
+      <div class="load-more-wrap" id="loadMoreWrap">
+        <button class="btn btn-secondary" id="loadMoreBtn">もっと読み込む</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- りのトレ一覧 -->
+  <section id="rino-tre" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Rino Training</span>
+        <h2 class="section-title">りのトレ・画像ギャラリー</h2>
+        <p class="section-desc">画像をクリックすると、そのトレーニングの背景にある理論や詳しいやり方の解説投稿を読むことができます。</p>
+      </div>
+
+      <div class="tre-tabs reveal">
+        <button class="tre-tab active" data-tab="upper">💪 上半身 <span>(肩・腕・背中)</span></button>
+        <button class="tre-tab" data-tab="lower">🦵 下半身 <span>(腰・膝・足裏)</span></button>
+      </div>
+
+      <div class="tre-gallery" id="treGallery">
+        <!-- JSで動的生成 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="images/rino_icon.jpg" alt="りのさんアイコン" class="footer-icon">
+          <div>
+            <div class="footer-name">北海道の認定作業療法士・整体師 りの</div>
+            <div class="footer-tagline">自分の身体を知り、自分で整える。</div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#about">プロフィール</a>
+          <a href="#philosophy">思いと前提</a>
+          <a href="#library">健康図鑑</a>
+          <a href="#rino-tre">りのトレ</a>
+        </div>
+      </div>
+      <div class="footer-disclaimer">
+        ※ このサイトの情報は健康リテラシーの向上を目的としており、特定の治療を保証するものではありません。強い痛みがある場合は必ず医療機関を受診してください。
+      </div>
+      <div class="footer-copy">© 2026 北海道の整体師・認定作業療法士 りの</div>
+    </div>
+  </footer>
+
+  <!-- モーダル -->
+  <div id="postModal" class="modal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div class="modal-cat" id="modalCat"></div>
+      <div class="modal-num" id="modalNum"></div>
+      <div class="modal-date" id="modalDate"></div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div id="imgModal" class="modal">
+    <div class="modal-overlay" id="imgModalOverlay"></div>
+    <div class="img-modal-box">
+      <button class="modal-close" id="imgModalClose" style="background: white;">✕</button>
+      <img id="imgModalSrc" src="" alt="りのトレ画像">
+      <div class="img-modal-name" id="imgModalName"></div>
+      <div id="imgModalLinkContainer"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    /* ── パスワード認証 ── */
+    (function(){
+      const PW = 'rinotre2025';
+      const KEY = 'rino_auth2';
+      const overlay = document.getElementById('pw-overlay');
+      const input   = document.getElementById('pw-input');
+      const errMsg  = document.getElementById('pw-err');
+      if (sessionStorage.getItem(KEY) === '1') {
+        overlay.style.display = 'none';
+      }
+      window.checkPw = function() {
+        if (input.value === PW) {
+          sessionStorage.setItem(KEY, '1');
+          overlay.style.display = 'none';
+        } else {
+          errMsg.textContent = 'パスワードが違います。もう一度お試しください。';
+          input.value = '';
+          setTimeout(() => errMsg.textContent = '', 1200);
+        }
+      };
+      input.addEventListener('keydown', function(e){
+        if (e.key === 'Enter') checkPw();
+      });
+    })();
+  </script>
+</body>
+</html>
